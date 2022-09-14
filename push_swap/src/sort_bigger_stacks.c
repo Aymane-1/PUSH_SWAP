@@ -6,7 +6,7 @@
 /*   By: aechafii <aechafii@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 04:31:32 by aechafii          #+#    #+#             */
-/*   Updated: 2022/09/14 06:39:26 by aechafii         ###   ########.fr       */
+/*   Updated: 2022/09/14 12:02:07 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,5 +113,4 @@ void	sort_bigger_stacks(t_frame *frame)
 	while (find_stack_len(frame, 'b'))
 		push_lowest_to_a(frame);
 	last_sort(frame);
-	// print_stacks(frame);
 }

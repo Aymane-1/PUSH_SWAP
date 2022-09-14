@@ -6,7 +6,7 @@
 /*   By: aechafii <aechafii@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 01:37:26 by aechafii          #+#    #+#             */
-/*   Updated: 2022/09/14 08:15:55 by aechafii         ###   ########.fr       */
+/*   Updated: 2022/09/14 12:01:51 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 //     printf("\nstack a :\n");
 //     while(1)
 //     {
-//         printf("%5ld", temp->num);
+//         printf("%ld   ", temp->num);
 //         temp = temp->next;
 //         if(temp == head)
 //             break;

@@ -6,7 +6,7 @@
 /*   By: aechafii <aechafii@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 15:46:10 by aechafii          #+#    #+#             */
-/*   Updated: 2022/09/14 04:20:22 by aechafii         ###   ########.fr       */
+/*   Updated: 2022/09/14 11:59:25 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ static void	complete_filling(t_frame *frame, char *str, int i, int j)
 			j = 0;
 			while (*str && *str == ' ')
 				str++;
-			while (*(str + j) && (*(str + j) == '-' || *(str + j) == '+'
+			while ((*(str + j) == '-' || *(str + j) == '+'
 					|| ft_isdigit(*(str + j))))
 				j++;
 			if (!*str)
@@ -101,11 +101,9 @@ static void	error_parser(t_frame *frame)
 		{
 			if (*str == ' ' || ft_isdigit(*str))
 				str++;
-			else if (*str == '-' && ft_isdigit(*(str + 1))
-				&& (str == frame->argv[i] || *(str - 1) == ' '))
+			else if (*str == '-' && ft_isdigit(*(str + 1)))
 				str++;
-			else if (*str == '+' && ft_isdigit(*(str + 1))
-				&& (str == frame->argv[i] || *(str - 1) == ' '))
+			else if (*str == '+' && ft_isdigit(*(str + 1)))
 				str++;
 			else
 				push_swap_error(frame);
