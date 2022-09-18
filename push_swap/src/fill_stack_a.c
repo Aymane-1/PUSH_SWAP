@@ -6,7 +6,7 @@
 /*   By: aechafii <aechafii@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 15:46:10 by aechafii          #+#    #+#             */
-/*   Updated: 2022/09/14 11:59:25 by aechafii         ###   ########.fr       */
+/*   Updated: 2022/09/17 05:45:22 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,10 @@ static void	check_duplicates(t_frame *frame)
 	}
 }
 
-static void	complete_filling(t_frame *frame, char *str, int i, int j)
+static void	complete_filling(t_frame *frame, char *str, int i)
 {
 	long int	test_int_size;
+	int			j;
 
 	while (str != NULL)
 	{
@@ -74,8 +75,6 @@ static void	complete_filling(t_frame *frame, char *str, int i, int j)
 			while ((*(str + j) == '-' || *(str + j) == '+'
 					|| ft_isdigit(*(str + j))))
 				j++;
-			if (!*str)
-				break ;
 			test_int_size = atoi_push_swap(str);
 			if (test_int_size > 2147483647 || test_int_size < -2147483648)
 				push_swap_error(frame);
@@ -122,6 +121,6 @@ void	fill_stack_a(t_frame *frame)
 	j = 0;
 	str = frame->argv[i];
 	error_parser(frame);
-	complete_filling(frame, str, i, j);
+	complete_filling(frame, str, i);
 	check_duplicates(frame);
 }

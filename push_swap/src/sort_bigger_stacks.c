@@ -6,7 +6,7 @@
 /*   By: aechafii <aechafii@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 04:31:32 by aechafii          #+#    #+#             */
-/*   Updated: 2022/09/14 12:02:07 by aechafii         ###   ########.fr       */
+/*   Updated: 2022/09/17 06:03:00 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,9 @@ void	push_non_lis_to_b(t_frame *frame)
 {
 	t_stack	*a;
 	int		len;
-	long	smallest;
 
 	len = find_stack_len(frame, 'a');
 	ft_index_stack(frame);
-	find_smallest(frame, 'a');
-	smallest = frame->a->smallest;
 	while (len--)
 	{
 		a = frame->a;

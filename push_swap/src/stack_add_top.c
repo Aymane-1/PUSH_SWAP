@@ -6,13 +6,13 @@
 /*   By: aechafii <aechafii@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 01:35:18 by aechafii          #+#    #+#             */
-/*   Updated: 2022/09/13 23:59:41 by aechafii         ###   ########.fr       */
+/*   Updated: 2022/09/17 01:38:51 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	case_top(t_frame *frame, char stack_name, int num)
+static void	case_top_empty(t_frame *frame, char stack_name, int num)
 {
 	t_stack		**top;
 
@@ -50,5 +50,5 @@ void	stack_add_top(t_frame *frame, char stack_name, int num)
 		*top = (*top)->prev;
 	}
 	else
-		case_top(frame, stack_name, num);
+		case_top_empty(frame, stack_name, num);
 }

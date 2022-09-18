@@ -6,7 +6,7 @@
 /*   By: aechafii <aechafii@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 05:01:09 by aechafii          #+#    #+#             */
-/*   Updated: 2022/09/14 06:40:03 by aechafii         ###   ########.fr       */
+/*   Updated: 2022/09/17 03:56:37 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,7 @@ void	find_lis(t_frame *frame)
 		while (tmp != head)
 		{
 			if (tmp->num > a->num)
-			{
 				tmp->lis = ft_max(a->lis + 1, tmp->lis);
-			}
 			tmp = tmp->next;
 		}
 		a = a->next;

@@ -6,7 +6,7 @@
 /*   By: aechafii <aechafii@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 06:22:53 by aechafii          #+#    #+#             */
-/*   Updated: 2022/09/14 08:14:11 by aechafii         ###   ########.fr       */
+/*   Updated: 2022/09/16 22:54:16 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,34 +47,34 @@ static int	compare_results(char *s1, char *s2)
 	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
 		i++;
 	if (s1[i] == s2[i])
-		return (0);
+		return (1);
 	else
-		return (s1[i] - s2[i]);
+		return (0);
 }
 
 static	void	execute_operations(t_frame *frame, char *output_ins)
 {
-	if (compare_results("pa\n", output_ins) == 0)
+	if (compare_results("pa\n", output_ins))
 		do_pa(frame, 0);
-	else if (compare_results("pb\n", output_ins) == 0)
+	else if (compare_results("pb\n", output_ins))
 		do_pb(frame, 0);
-	else if (compare_results("sa\n", output_ins) == 0)
+	else if (compare_results("sa\n", output_ins))
 		do_sa(frame, 0);
-	else if (compare_results("sb\n", output_ins) == 0)
+	else if (compare_results("sb\n", output_ins))
 		do_sb(frame, 0);
-	else if (compare_results("ss\n", output_ins) == 0)
+	else if (compare_results("ss\n", output_ins))
 		do_ss(frame, 0);
-	else if (compare_results("ra\n", output_ins) == 0)
+	else if (compare_results("ra\n", output_ins))
 		do_ra(frame, 0);
-	else if (compare_results("rb\n", output_ins) == 0)
+	else if (compare_results("rb\n", output_ins))
 		do_rb(frame, 0);
-	else if (compare_results("rr\n", output_ins) == 0)
+	else if (compare_results("rr\n", output_ins))
 		do_rr(frame, 0);
-	else if (compare_results("rra\n", output_ins) == 0)
+	else if (compare_results("rra\n", output_ins))
 		do_rra(frame, 0);
-	else if (compare_results("rrb\n", output_ins) == 0)
+	else if (compare_results("rrb\n", output_ins))
 		do_rrb(frame, 0);
-	else if (compare_results("rrr\n", output_ins) == 0)
+	else if (compare_results("rrr\n", output_ins))
 		do_rrr(frame, 0);
 	else
 		push_swap_error(frame);
@@ -91,8 +91,8 @@ void	read_instructions(t_frame *frame)
 		line = get_next_line(0);
 	}
 	if (sorted(frame) && !(frame->b))
-		write(1, "\033[0;32mOK\n", 11);
+		write(1, "\033[1;32mOK\n", 11);
 	else
-		write(1, "\033[0;31mKO\n", 11);
+		write(1, "\033[1;31mKO\n", 11);
 	free(line);
 }

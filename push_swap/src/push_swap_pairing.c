@@ -6,7 +6,7 @@
 /*   By: aechafii <aechafii@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 22:42:52 by aechafii          #+#    #+#             */
-/*   Updated: 2022/09/13 23:53:55 by aechafii         ###   ########.fr       */
+/*   Updated: 2022/09/17 06:06:37 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ static void	case_of_bigg_or_small(t_frame *frame, long b_num)
 
 	b = frame->b;
 	len_b = find_stack_len(frame, 'b');
-	find_smallest(frame, 'a');
 	while (len_b--)
 	{
 		if (b->num == b_num)

@@ -6,7 +6,7 @@
 /*   By: aechafii <aechafii@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 05:03:06 by aechafii          #+#    #+#             */
-/*   Updated: 2022/09/13 09:17:39 by aechafii         ###   ########.fr       */
+/*   Updated: 2022/09/17 06:37:51 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ int b_ind_of_pair, int *b_moves)
 		&& b_ind_of_pair >= find_stack_len(frame, 'a') / 2)
 	{
 		moves_b = b_index;
-		moves_a = find_stack_len(frame, 'a') - b_ind_of_pair + 1;
+		moves_a = find_stack_len(frame, 'a') - b_ind_of_pair;
 		*b_moves = (moves_a + moves_b) + 1;
 	}
 	else if (b_index >= find_stack_len(frame, 'b') / 2
 		&& b_ind_of_pair <= find_stack_len(frame, 'a') / 2)
 	{
 		moves_a = b_ind_of_pair;
-		moves_b = find_stack_len(frame, 'b') - b_index + 1;
+		moves_b = find_stack_len(frame, 'b') - b_index;
 		*b_moves = (moves_a + moves_b) + 1;
 	}
 }
@@ -55,8 +55,8 @@ static void	ft_num_of_moves(t_frame *frame, int moves_a, int moves_b, int i)
 		else if (b->index >= find_stack_len(frame, 'b') / 2
 			&& b->ind_of_pair >= find_stack_len(frame, 'a') / 2)
 		{
-			moves_a = find_stack_len(frame, 'a') - b->ind_of_pair + 1;
-			moves_b = find_stack_len(frame, 'b') - b->index + 1;
+			moves_a = find_stack_len(frame, 'a') - b->ind_of_pair;
+			moves_b = find_stack_len(frame, 'b') - b->index;
 			b->moves = ft_max(moves_a, moves_b) + 1;
 		}
 		else

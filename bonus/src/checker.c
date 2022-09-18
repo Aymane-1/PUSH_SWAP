@@ -6,7 +6,7 @@
 /*   By: aechafii <aechafii@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 06:09:29 by aechafii          #+#    #+#             */
-/*   Updated: 2022/09/14 00:42:53 by aechafii         ###   ########.fr       */
+/*   Updated: 2022/09/17 06:45:35 by aechafii         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,6 @@ static void	complete_filling(t_frame *frame, char *str, int i, int j)
 			while (*(str + j) && (*(str + j) == '-' || *(str + j) == '+'
 					|| ft_isdigit(*(str + j))))
 				j++;
-			if (!*str)
-				break ;
 			test_int_size = atoi_push_swap(str);
 			if (test_int_size > 2147483647 || test_int_size < -2147483648)
 				push_swap_error(frame);
